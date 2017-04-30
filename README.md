@@ -20,3 +20,6 @@ Run: `$ bundle install`, `$ rails db:migrate` and `$ rails db:seed` in your term
 ## Misc
 - Added song list in seeds.rb file
 - Added nav bar with current_user logged in details
+
+## Backlog
+- Display User-specific Playlists
