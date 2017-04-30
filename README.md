@@ -1,7 +1,10 @@
 # Sanity Music App
-The project ERD can be found [here](http://dbdesigner.net/designer/schema/85387)
 
-## Prerequisite
+## Project ERD
+
+![ERD](app/assets/images/erd.png)
+
+## Prerequisites
 Run: `$ bundle install`, `$ rails db:migrate` and `$ rails db:seed` in your terminal console
 
 ## Resources
