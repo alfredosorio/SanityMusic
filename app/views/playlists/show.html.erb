@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Playlistname:</strong>
+  <%= @playlist.playlistname %>
+</p>
+
+<p>
+  <strong>Songs:</strong>
+  <% @playlist.songs.each do |sn| %>
+  <ul>
+    <li><%= sn.title %></li>
+  </ul>
+  <% end %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @playlist.user.email %>
+</p>
+
+<%= link_to 'Edit', edit_playlist_path(@playlist) %> |
+<%= link_to 'Back', playlists_path %>
