@@ -13,12 +13,10 @@
   <tbody>
     <% @playlists.each do |playlist| %>
       <tr>
-        <td><%= playlist.playlistname %></td>
+        <td><%= link_to playlist.playlistname, playlist %></td>
         <td><%= playlist.user.username %></td>
         <td><%= playlist.user.email %></td>
-        <td><%= link_to 'Show', playlist %></td>
-        <td><%= link_to 'Edit', edit_playlist_path(playlist) %></td>
-        <td><%= link_to 'Destroy', playlist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><small><%= pluralize playlist.songs.count, 'song' %></small></td>
       </tr>
     <% end %>
   </tbody>

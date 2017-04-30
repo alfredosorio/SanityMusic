@@ -1,5 +1,8 @@
+<h1> <%= link_to 'Sanity Online', root_path %> </h1>
+
 <% if user_signed_in? %>
-  <p>You are currently signed in as: <strong><%= @user.username %></strong>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %></p>
-  <hr />
+  <small>You are currently signed in as: <strong><%= @user.username %></strong></small>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
 <% end %>
+
+<hr />

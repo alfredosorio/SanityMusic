@@ -1,23 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Playlistname:</strong>
-  <%= @playlist.playlistname %>
-</p>
+<h2><%= @playlist.playlistname %></h2>
+<small> Created by: <%= @playlist.user.email %></small><br />
 
 <p>
-  <strong>Songs:</strong>
   <% @playlist.songs.each do |sn| %>
-  <ul>
-    <li><%= sn.title %></li>
-  </ul>
+    <li><%= sn.artist %> - <%= sn.title %></li>
   <% end %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @playlist.user.email %>
-</p>
-
-<%= link_to 'Edit', edit_playlist_path(@playlist) %> |
+<%= link_to 'Edit', edit_playlist_path(@playlist) %>
+<%= link_to 'Delete', @playlist, method: :delete, data: { confirm: 'Are you sure?' } %><br />
 <%= link_to 'Back', playlists_path %>
